@@ -18,9 +18,9 @@ var outputPtr *string
 var outputGeneratePtr *string
 
 func init() {
-	urlPtr = flag.String(UrlFlag, "https://raw.githubusercontent.com/shagiradgers/telegram-notification-api/master/api/telegram_notification.proto", "enter the link to the proto file")
-	outputPtr = flag.String(OutputFlag, "proto.proto", "enter the path to the file where the proto file will be created")
-	outputGeneratePtr = flag.String(OutputProtoFlag, "/Users/smingaraev/GolandProjects/proto-generator/generated/", "enter the path where the file will be generated")
+	urlPtr = flag.String(UrlFlag, "", "enter the link to the proto file")
+	outputPtr = flag.String(OutputFlag, "", "enter the path to the file where the proto file will be created")
+	outputGeneratePtr = flag.String(OutputProtoFlag, "", "enter the path where the file will be generated")
 
 	flag.Parse()
 	if urlPtr == nil || *urlPtr == "" {
